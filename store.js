@@ -27,7 +27,17 @@ const store = (() => {
                 return state;
         }
     }
+
+    //function to ad subscriber call backs 
+    function subscribe(callback) {
+        subscribers()
+    }
+
+    return {
+        getState,
+        dispatch,
+        subscribe,
+    };
     
 
-
-})
+})();
