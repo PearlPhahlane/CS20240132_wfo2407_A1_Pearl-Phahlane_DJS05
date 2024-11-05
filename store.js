@@ -30,7 +30,7 @@ const store = (() => {
 
     //function to ad subscriber call backs 
     function subscribe(callback) {
-        subscribers()
+        subscribers();
     }
 
     return {
@@ -39,5 +39,4 @@ const store = (() => {
         subscribe,
     };
     
-
 })();
