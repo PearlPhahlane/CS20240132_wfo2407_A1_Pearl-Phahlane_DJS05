@@ -49,3 +49,32 @@ const store = (() => {
     };
     
 })();
+
+//Scenario testing 
+
+function Scenario1Test() {
+    console.log(store.getState());
+};
+
+function Scenario2Test() {
+    store.dispatch( { type: "ADD" });
+    store.dispatch( { type: "ADD" });
+    store.getState();
+    console.log(store.getState())
+};
+
+function Scenario3Test() {
+    store.dispatch( { type: "SUBTRACT" });
+    console.log(store.getState());
+
+}
+
+function Scenario4Test() {
+    store.dispatch( { type: "RESET" });
+    console.log(store.getState());
+}
+
+Scenario1Test();
+Scenario2Test();
+Scenario3Test();
+Scenario4Test();
