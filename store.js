@@ -15,6 +15,19 @@ const store = (() => {
         return state
     };
 
+    //function to dispatch actions to modify state
+    function dispatch(action) {
+    //Switch statements to handle action types(add and subtract)
+        switch(action.type) {
+            case 'increment':
+                return state + 1;
+            case 'decrement':
+                return state - 1;
+            default:
+                return state;
+        }
+    }
+    
 
 
 })
