@@ -1,6 +1,6 @@
 //Initial state object
 const initialState = {
-    count = 0
+    count : 0
 };
 
 //store object
@@ -12,23 +12,28 @@ const store = (() => {
 
     //function to get the current state
     function getState(){
-        return state
+        return state;
     };
 
     //function to dispatch actions to modify state
     function dispatch(action) {
     //Switch statements to handle action types(add and subtract)
         switch(action.type) {
-            case 'increment':
-                return state + 1;
-            case 'decrement':
-                return state - 1;
+            case 'ADD':
+                state ={ count: state.count + 1};
+                break;
+            case 'SUBTRACT':
+                state = { count: state.count -1 };
+                break;
+            case 'RESET':
+                state = initialState;
+                break;
             default:
                 return state;
         }
     }
 
-    //function to ad subscriber call backs 
+    //function to add subscriber callbacks 
     function subscribe(callback) {
         subscribers();
     }
