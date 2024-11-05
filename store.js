@@ -9,5 +9,12 @@ const store = (() => {
     let state = initialState;
     const subscribers = [];
 
-    
+
+    //function to get the current state
+    function getState(){
+        return state
+    };
+
+
+
 })
