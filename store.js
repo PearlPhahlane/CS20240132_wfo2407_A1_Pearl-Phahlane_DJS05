@@ -31,11 +31,15 @@ const store = (() => {
             default:
                 return state;
         }
+
+        //Notify all subscribers of all state changes
+        subscribers.forEach(callback => callback());
     }
 
     //function to add subscriber callbacks 
     function subscribe(callback) {
-        subscribers();
+        //add callback to subscribers
+        subscribers.push(callback)
     }
 
     return {
